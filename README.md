@@ -56,9 +56,30 @@ Collect data from various sources (CSV, excel, databases, web scraping, APIs).
 ### 4.2 Reading the Data
   For CSV files
   
-   `data_frame=pd.read_csv(filename)`
+   `df=pd.read_csv('filename.csv')`
 
    For Excel files
    
-   `data_frame=pd.read_excel(filename)`
+   `df=pd.read_excel('filename.xlsx')`
+
+### 4.3. Data Cleaning
+   **Handling missing values**
+   
+   Fill missing values with mean
+     
+    df.fillna(df.mean(), inplace=True) 
+
+  Drop rows with missing values
+
+    df.dropna(inplace=True)  
+
+   **Removing duplicates**
+ 
+    df.drop_duplicates(inplace=True)
+
+   **Data type conversion**
+
+    df['column_name'] = df['column_name'].astype('int')
+
+  
    
