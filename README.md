@@ -67,19 +67,65 @@ Collect data from various sources (CSV, excel, databases, web scraping, APIs).
    
    Fill missing values with mean
      
-    df.fillna(df.mean(), inplace=True) 
+   `df.fillna(df.mean(), inplace=True)`
 
   Drop rows with missing values
 
-    df.dropna(inplace=True)  
+   `df.dropna(inplace=True)`
 
    **Removing duplicates**
  
-    df.drop_duplicates(inplace=True)
+   `df.drop_duplicates(inplace=True)`
 
    **Data type conversion**
 
-    df['column_name'] = df['column_name'].astype('int')
+   `df['column_name'] = df['column_name'].astype('int')`
+
+### 4.4 Understanding Data
+   **Descriptive statistics**
+
+   `print(df.describe())`
+
+   **Data shape and types**
+
+    print(df.shape)
+    print(df.dtypes)
+
+### 4.5 Data Visualization
+
+   **Histogram**
+
+    plt.hist(df['column_name'], bins=30)
+    plt.xlabel('Column Name')
+    plt.ylabel('Frequency')
+    plt.title('Histogram of Column Name')
+    plt.show()
+
+   **Box plot**
+   
+    sns.boxplot(x=df['column_name'])
+    plt.title('Box Plot of Column Name')
+    plt.show()
+
+   **Scatter plot**
+
+    plt.scatter(df['column1'], df['column2'])
+    plt.xlabel('Column 1')
+    plt.ylabel('Column 2')
+    plt.title('Scatter Plot of Column 1 vs Column 2')
+    plt.show()
+
+   **Correlation matrix**
+   
+    correlation_matrix = df.corr()
+    sns.heatmap(correlation_matrix, annot=True)
+    plt.title('Correlation Matrix')
+    plt.show()
+
+## 5. Conclusion
+Exploratory Data Analysis is an iterative process that helps understand the data, which is crucial for making the decisions before building any Machine Learning models. Regular practice and exploration of different datasets will enhance your EDA skills.
+
+
 
   
    
